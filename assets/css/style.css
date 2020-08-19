@@ -1,0 +1,23 @@
+div {
+  padding: 15px;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid rebeccapurple;
+}
+
+th {
+  text-transform: uppercase;
+}
+
+td {
+  width: 200px;
+  padding: 5px;
+}

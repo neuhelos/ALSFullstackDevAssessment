@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ALS Developer Test</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- results.js creates a global RESULTS variable which is an array of objects containing "user cards." -->
+    <script src="./assets/data/results.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const Table = (props) => (
+        <table>
+          <Head />
+          <Body results={props.results} />
+        </table>
+      );
+
+      const Head = (props) => {
+        return (
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>username</th>
+              <th>email</th>
+              <th>phone</th>
+            </tr>
+          </thead>
+        );
+      };
+
+      /*
+      Complete the Body component to finish rendering the results.
+      You are allowed and encouraged to create additional functions or
+      components in order to complete this task.
+      */
+      const Body = (props) => null;
+
+      ReactDOM.render(
+        <Table results={RESULTS} />,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
