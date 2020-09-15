@@ -54,9 +54,7 @@ const PublicAPI = () => {
         fakerAPI(userCount)
     }
 
-
     useEffect ( () => {
-
     }, [data])
 
     let users = data.map( fakeUser => {

@@ -33,7 +33,7 @@ const ALS = () => {
   return (
     <div className={classes.root}>
       <Typography className={classes.margin}  variant='h3'>ALS Fullstack Dev Exercises</Typography>
-      <Button className={classes.margin} variant="contained" onClick={toggleExercise} >Toggle Exercises</Button>
+      <Button className={classes.margin} variant="contained" onClick={toggleExercise}>Toggle Exercises</Button>
       <div className={classes.margin}>
         {toggle ? <UserTable results={RESULTS}/> : <PublicAPI />}
       </div>
