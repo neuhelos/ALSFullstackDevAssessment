@@ -1,4 +1,11 @@
-# ALS Full Stack Developer Exercise
+# ALS Full Stack Developer Exercise Documentation
+
+
+
+
+
+
+# ALS Full Stack Developer Exercise Instructions
 
 In this repo, `index.html` is a simple, single-page React.js app.
 
@@ -12,3 +19,4 @@ It's OK if you have not worked in React before. Learning as you go is something 
 
 [screenshot]: ./docs/reference.png "Completed Project Reference"
 [react components and props]: https://reactjs.org/docs/components-and-props.html
+
