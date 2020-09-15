@@ -11,7 +11,7 @@ The app also uses the following dependencies, installed via npm:
  - MaterialUI: A UI framework providing a library of reusable styled React components for rendering Google's Material design system
  - Axios: a Promise-based HTTP client for fetching data via HTTP requests to APIs
 
-
+![App Demo](./AppDemo.gif)
 
 # ALS Full Stack Developer Exercise Instructions
 
