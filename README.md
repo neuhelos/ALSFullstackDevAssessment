@@ -8,8 +8,8 @@ To run the app locally in development mode, use 'npm start' in your console. It 
 
 The app also uses the following dependencies, installed via npm: 
     
-    - MaterialUI: A UI framework providing a library of reusable styled React components for rendering Google's Material design system
-    - Axios: a Promise-based HTTP client for fetching data via HTTP requests to APIs
+ - MaterialUI: A UI framework providing a library of reusable styled React components for rendering Google's Material design system
+ - Axios: a Promise-based HTTP client for fetching data via HTTP requests to APIs
 
 
 
