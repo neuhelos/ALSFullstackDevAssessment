@@ -65,7 +65,7 @@ const PublicAPI = () => {
         <div>
             <Typography variant='h4' align='center'>PUBLIC API CONSUMPTION</Typography>
             <form className={classes.root} onSubmit={handleSubmit}>
-                <TextField className={classes.margin} type='number' label="User Count" variant="outlined" placeholder='Enter Number to of Users to Display' value={userCount} onChange={handleChange}/>
+                <TextField className={classes.margin} type='number' label="User Count" variant="outlined" placeholder='Enter Number of Users to Display' value={userCount} onChange={handleChange}/>
                 <Button className={classes.margin} type='submit' variant="contained">SUBMIT</Button>
             </form>
             
