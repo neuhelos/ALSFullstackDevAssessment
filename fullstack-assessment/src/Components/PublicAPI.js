@@ -18,6 +18,16 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         padding: theme.spacing(2),
+        flexDirection: 'column'
+    },
+    form: {
+        display: 'flex',
+        justifyContent: 'center',
+        padding: theme.spacing(2),
+        width: '50%'
+    },
+    list: {
+        width: '50%'
     },
     margin: {
         margin: theme.spacing(1)
@@ -74,15 +84,15 @@ const PublicAPI = () => {
     })   
 
     return (
-        <div>
+        <div className={classes.root}>
             <Typography variant='h4' align='center' gutterBottom={true}>PUBLIC API CONSUMPTION</Typography>
-            <form className={classes.root} onSubmit={handleSubmit}>
+            <form className={classes.form} onSubmit={handleSubmit}>
                 <TextField fullWidth className={classes.margin} type='number' label="User Count" variant="outlined" placeholder='Enter Number of Users to Display' value={userCount} onChange={handleChange}/>
                 <Button className={classes.margin} type='submit' variant="contained">SUBMIT</Button>
             </form>
             
             <Typography variant='h5' align='center' gutterBottom={true}>Faker.JS User List</Typography>
-            {loading ? <Loading /> : <List style={{margin: 0, padding: 0}}>{users}</List>}
+            {loading ? <Loading /> : <List className={classes.list}>{users}</List>}
         </div>
     )
 }
