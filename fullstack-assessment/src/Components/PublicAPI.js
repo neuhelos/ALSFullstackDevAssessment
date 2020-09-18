@@ -7,6 +7,10 @@ import {makeStyles} from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -52,25 +56,33 @@ const PublicAPI = () => {
         setLoading(true)
         event.preventDefault()
         fakerAPI(userCount)
+        setUserCount("")
     }
 
     useEffect ( () => {
     }, [data])
 
-    let users = data.map( fakeUser => {
-        return <li key={fakeUser.username} id={fakeUser.username} style={{listStylePosition: 'inside'}}>{fakeUser.name}</li>
+    let users = data.map( (fakeUser, index) => {
+        return  ( 
+            <>
+                <ListItem key={fakeUser.username} id={fakeUser.username} style={{listStylePosition: 'inside'}}>
+                    <ListItemText primary={`${index + 1}. ${fakeUser.name}`} secondary={fakeUser.username} />
+                </ListItem>
+                <Divider />
+            </>
+        )
     })   
 
     return (
         <div>
             <Typography variant='h4' align='center'>PUBLIC API CONSUMPTION</Typography>
             <form className={classes.root} onSubmit={handleSubmit}>
-                <TextField className={classes.margin} type='number' label="User Count" variant="outlined" placeholder='Enter Number of Users to Display' value={userCount} onChange={handleChange}/>
+                <TextField fullWidth className={classes.margin} type='number' label="User Count" variant="outlined" placeholder='Enter Number of Users to Display' value={userCount} onChange={handleChange}/>
                 <Button className={classes.margin} type='submit' variant="contained">SUBMIT</Button>
             </form>
             
             <Typography variant='h5' align='center'>Faker.JS User List</Typography>
-            {loading ? <Loading /> : <ol style={{margin: 0, padding: 0}}>{users}</ol>}
+            {loading ? <Loading /> : <List style={{margin: 0, padding: 0}}>{users}</List>}
         </div>
     )
 }
