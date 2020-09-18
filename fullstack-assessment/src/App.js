@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       flex: 1,
-      backgroundColor: 'rgba(255,255,255,0.85)'
+      backgroundColor: 'rgba(255,255,255,0.90)'
     },
     margin: {
       margin: theme.spacing(2)
