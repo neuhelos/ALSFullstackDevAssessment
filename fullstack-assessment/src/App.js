@@ -27,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
       '& *': {
         fontFamily: 'montserrat'
       },
-      padding: theme.spacing(2), 
+      padding: theme.spacing(3), 
     },
     container: {
-      width: '100%',
+      width: '75%',
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
