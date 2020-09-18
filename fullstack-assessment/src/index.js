@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import ALS from './App';
 
+import 'typeface-montserrat'
 
 ReactDOM.render(
   <React.StrictMode>
