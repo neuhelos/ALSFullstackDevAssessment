@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       backgroundImage: `url(${ALSLogo})`,
       backgroundPosition: 'center',
-      textAlign: 'center',
+      backgroundSize: '100%',
       display: 'flex',
       flex: 1,
       alignItems: 'center',
@@ -27,16 +27,25 @@ const useStyles = makeStyles((theme) => ({
       '& *': {
         fontFamily: 'montserrat'
       },
+      padding: theme.spacing(2), 
     },
     container: {
       width: '100%',
       display: 'flex',
+      alignItems: 'center',
       flexDirection: 'column',
       flex: 1,
-      backgroundColor: 'rgba(255,255,255,0.90)'
+      backgroundColor: 'rgba(255,255,255,0.90)',
+      borderRadius: '4px'
     },
-    margin: {
+    content: {
+      width: '50%',
       margin: theme.spacing(2)
+    },
+    button: {
+      margin: theme.spacing(2),
+      width: '25%',
+      height: '3rem'
     }
 }))
 
@@ -55,11 +64,9 @@ const ALS = () => {
       <CssBaseline />
       <div className={classes.root}>
         <div className={classes.container}>
-          <Typography className={classes.margin}  variant='h3'>ALS Fullstack Dev Exercises</Typography>
-          <div>
-          <Button className={classes.margin} variant="contained" onClick={toggleExercise}>Toggle Exercises</Button>
-          </div>
-          <div className={classes.margin}>
+          <Typography variant='h3' gutterBottom={true} style={{margin: '8px'}}>ALS Fullstack Dev Exercises</Typography>
+          <Button className={classes.button} variant="contained" onClick={toggleExercise} >Toggle Exercises</Button>
+          <div className={classes.content}>
             {toggle ? <UserTable results={RESULTS}/> : <PublicAPI />}
           </div>
         </div>

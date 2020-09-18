@@ -14,6 +14,7 @@ import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -24,13 +25,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         padding: theme.spacing(2),
-        width: '50%'
+        width: '100%'
     },
     list: {
-        width: '50%'
+        width: '100%'
     },
-    margin: {
-        margin: theme.spacing(1)
+    input: {
+        margin: theme.spacing(1),
+        width: '50%'
     }
 }))
 
@@ -87,8 +89,8 @@ const PublicAPI = () => {
         <div className={classes.root}>
             <Typography variant='h4' align='center' gutterBottom={true}>PUBLIC API CONSUMPTION</Typography>
             <form className={classes.form} onSubmit={handleSubmit}>
-                <TextField fullWidth className={classes.margin} type='number' label="User Count" variant="outlined" placeholder='Enter Number of Users to Display' value={userCount} onChange={handleChange}/>
-                <Button className={classes.margin} type='submit' variant="contained">SUBMIT</Button>
+                <TextField className={classes.input} type='number' label="User Count" variant="outlined" placeholder='Enter Count to Display' value={userCount} onChange={handleChange}/>
+                <Button className={classes.input} type='submit' variant="contained">SUBMIT</Button>
             </form>
             
             <Typography variant='h5' align='center' gutterBottom={true}>Faker.JS User List</Typography>
