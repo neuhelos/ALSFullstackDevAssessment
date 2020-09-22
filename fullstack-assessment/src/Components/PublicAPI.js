@@ -25,10 +25,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         padding: theme.spacing(2),
-        width: '100%'
+        width: '50%'
     },
     list: {
-        width: '100%'
+        width: '50%'
     },
     input: {
         margin: theme.spacing(1),

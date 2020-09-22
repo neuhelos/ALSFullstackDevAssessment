@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '4px'
     },
     content: {
-      width: '50%',
+      width: '100%',
       margin: theme.spacing(2)
     },
     button: {

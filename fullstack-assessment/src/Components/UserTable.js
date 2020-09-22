@@ -22,7 +22,7 @@ const useStyles = makeStyles( (theme) => ({
         // textAlign: 'center'
     },
     cell: {
-        borderBottom: '1px solid rebeccapurple'
+        borderBottom: '1px solid rebeccapurple',
     }
 }));
 
